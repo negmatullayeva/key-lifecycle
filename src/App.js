@@ -11,10 +11,14 @@ export default class App extends React.Component {
     ],
   };
 
+  handleSomething = () => {
+    console.log("App.js set state update");
+  };
+
   render() {
     return (
       <div className="App">
-        <Posts posts={this.state.posts} />
+        <Posts posts={this.state.posts} callBack={this.handleSomething} />
       </div>
     );
   }

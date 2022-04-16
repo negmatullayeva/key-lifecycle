@@ -1,7 +1,14 @@
-import React from "react";
-
-function PostList(props) {
-  return <p onClick={props.cb}>{props.name}</p>;
+import "./PostList.css";
+export default function PostList(props) {
+  const { name, id, func } = props;
+  return (
+    <div>
+      <h1>
+        {name}
+        <button className="delete" onClick={() => func(id)}>
+          Delete
+        </button>
+      </h1>
+    </div>
+  );
 }
-
-export default PostList;

@@ -1,8 +1,9 @@
 import React from "react";
 import Posts from "./components/Posts";
+import Form from "./Form";
 import "./App.css";
 
-export default class App extends React.Component {
+class App extends React.Component {
   state = {
     posts: [
       { id: 1, name: "JavaScript" },
@@ -11,15 +12,18 @@ export default class App extends React.Component {
     ],
   };
 
-  handleSomething = () => {
-    console.log("App.js set state update");
+  deleteHandle = (id) => {
+    this.setState({ posts: this.state.posts.filter((item) => item.id !== id) });
   };
 
   render() {
     return (
       <div className="App">
-        <Posts posts={this.state.posts} callBack={this.handleSomething} />
+        <Posts posts={this.state.posts} func={this.deleteHandle} />
+        <Form />
       </div>
     );
   }
 }
+
+export default App;

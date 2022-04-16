@@ -1,0 +1,27 @@
+input[type="email"]{
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  background-color: rgb(252, 231, 204);
+  border: 2px solid rgb(245, 159, 46);
+  font-size: 22px;
+}
+input::placeholder{
+  font-size: 22px;
+}
+textarea, select{
+  width: 100%; 
+  padding: 15px 20px;
+  background-color: rgb(252, 231, 204);
+  border: 2px solid rgb(245, 159, 46);
+}
+button{
+  color: #fff;
+  background-color: rgb(245, 159, 46);
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  margin-top: 15px;
+  cursor: pointer;
+} 
